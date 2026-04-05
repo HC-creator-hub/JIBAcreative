@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HC Graphics | Premium Font Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --dark-blue: #0A192F;
+            --light-blue: #112240;
+            --text-white: #E6F1FF;
+            --accent-blue: #64FFDA;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--text-white);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        /* Navigation */
+        nav {
+            background: rgba(10, 25, 47, 0.95);
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-sizing: border-box;
+            border-bottom: 1px solid var(--gold);
+        }
+
+        .logo img {
+            height: 50px;
+            border-radius: 5px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('Samples1 (2).png');
+            background-size: cover;
+            background-position: center;
+            margin-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        /* Font Grid */
+        .container {
+            padding: 50px 10%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--gold);
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .font-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .font-card {
+            background: var(--light-blue);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        .font-card:hover {
+            transform: translateY(-10px);
+            border: 1px solid var(--gold);
+        }
+
+        .font-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .font-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .font-name {
+            font-size: 1.5rem;
+            color: var(--gold);
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .font-desc {
+            font-size: 0.9rem;
+            color: #8892B0;
+            margin-bottom: 20px;
+            height: 60px;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--dark-blue);
+            padding: 10px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .buy-btn:hover {
+            background: var(--text-white);
+            transform: scale(1.05);
+        }
+
+        /* Donation Section */
+        .donation-section {
+            background: var(--light-blue);
+            padding: 60px 10%;
+            text-align: center;
+            margin: 50px 0;
+            border-radius: 20px;
+        }
+
+        .coffee-btn {
+            background: #FFDD00;
+            color: #000000;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Contact Form */
+        .contact-section {
+            padding: 50px 10%;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--light-blue);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #233554;
+            background: var(--dark-blue);
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background: var(--accent-blue);
+            color: var(--dark-blue);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #8892B0;
+            border-top: 1px solid #233554;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="HC Graphics Logo">
+        </div>
+        <div>
+            <a href="#fonts" style="color: var(--text-white); text-decoration: none; margin-left: 20px;">Fonts</a>
+            <a href="#contact" style="color: var(--text-white); text-decoration: none; margin-left: 20px;">Contact</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h1>PREMIUM FONT & GRAPHICS STUDIO</h1>
+        <p>Crafting Elegance for Your Professional Designs</p>
+    </div>
+
+    <div class="container" id="fonts">
+        <h2 class="section-title">Exclusive Collection</h2>
+        
+        <div class="font-grid">
+            
+            <div class="font-card">
+                <img src="Samples1 (2).png" alt="Callio Font">
+                <div class="font-info">
+                    <div class="font-name">Callio Script</div>
+                    <p class="font-desc">A graceful, flowing script font perfect for wedding invites and luxury branding.</p>
+                    <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY TTF / OTF</a>
+                </div>
+            </div>
+
+            <div class="font-card">
+                <img src="Samples1 (3).png" alt="Vea Font">
+                <div class="font-info">
+                    <div class="font-name">Vea Signature</div>
+                    <p class="font-desc">Minimalist and stylish signature font for modern logos and watermarks.</p>
+                    <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY TTF / OTF</a>
+                </div>
+            </div>
+
+            <div class="font-card">
+                <img src="Samples1 (5).png" alt="Candela Font">
+                <div class="font-info">
+                    <div class="font-name">Candela Serif</div>
+                    <p class="font-desc">Classic serif with a modern twist, ideal for editorial layouts and magazines.</p>
+                    <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY TTF / OTF</a>
+                </div>
+            </div>
+
+            <div class="font-card">
+                <img src="Samples1 (1).png" alt="Tracing Font">
+                <div class="font-info">
+                    <div class="font-name">Kiddo Trace Dot</div>
+                    <p class="font-desc">Educational dot font designed specifically for kids' handwriting practice books.</p>
+                    <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY TTF / OTF</a>
+                </div>
+            </div>
+
+            <div class="font-card">
+                <img src="Samples1 (9).png" alt="Dash Font">
+                <div class="font-info">
+                    <div class="font-name">LearnDash Pro</div>
+                    <p class="font-desc">Premium dashed line font for kindergarten workbooks and tracing activities.</p>
+                    <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY TTF / OTF</a>
+                </div>
+            </div>
+
+            <div class="font-card">
+                <img src="Samples1 (7).png" alt="Arthur Bold">
+                <div class="font-info">
+                    <div class="font-name">Arthur Bold Learner</div>
+                    <p class="font-desc">Strong, clear, and highly legible bold font for early childhood education.</p>
+                    <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY TTF / OTF</a>
+                </div>
+            </div>
+
+<div class="font-card">
+    <img src="7BBBB594-D59B-4AB4-AF75-D0AC6A9E71E8.jpg" alt="Bearded Skull">
+    <div class="font-info">
+        <div class="font-name">Bearded Skull Vector</div>
+        <p class="font-desc">A detailed, edgy skull illustration ideal for high-end streetwear and tattoo-style apparel.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY AI / EPS</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="Asset 1@2x.png" alt="Spirit Wolf">
+    <div class="font-info">
+        <div class="font-name">Spirit Wolf Mascot</div>
+        <p class="font-desc">Sharp, modern wolf profile designed for sports branding and competitive gaming logos.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY AI / PNG</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="Asset 2@2x.png" alt="HC Graphics Logo">
+    <div class="font-info">
+        <div class="font-name">Corporate Identity Peak</div>
+        <p class="font-desc">A minimalist mountain-concept logo representing stability and premium design quality.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="AUSTRALIA STARTUPS GLENOWRA (2).jpg" alt="Glenowra Startup">
+    <div class="font-info">
+        <div class="font-name">Startup Vision Board</div>
+        <p class="font-desc">Professional branding layout for modern tech startups looking for a clean, corporate aesthetic.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY DESIGN</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="ball 1.png" alt="Dynamic Ball">
+    <div class="font-info">
+        <div class="font-name">Motion Sports Element</div>
+        <p class="font-desc">A 3D-style dynamic ball graphic perfect for sports posters and energy-themed digital media.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="car net.png" alt="Car Network">
+    <div class="font-info">
+        <div class="font-name">Automotive Tech Grid</div>
+        <p class="font-desc">Complex network illustration for automotive industries and smart vehicle connectivity ads.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="coffe leaves.png" alt="Coffee Leaves">
+    <div class="font-info">
+        <div class="font-name">Botanical Coffee Asset</div>
+        <p class="font-desc">Elegant, hand-drawn coffee leaves suitable for organic cafe branding and eco-friendly packaging.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY AI / PDF</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="COLECTIVZ (1).png" alt="Colectivz">
+    <div class="font-info">
+        <div class="font-name">Colectivz Agency UI</div>
+        <p class="font-desc">Modern creative agency interface elements for professional portfolios and digital services.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY UI KIT</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="ddAsset 1@2x.png" alt="Dragon Fruit">
+    <div class="font-info">
+        <div class="font-name">Exotic Dragon Fruit</div>
+        <p class="font-desc">Vibrant, tropical vector illustration tailored for summer-themed merchandise and juice branding.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY AI / EPS</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="dsAsset 1@2x.png" alt="Shield Asset">
+    <div class="font-info">
+        <div class="font-name">Apex Security Shield</div>
+        <p class="font-desc">A sleek, geometric shield icon designed for cybersecurity firms and modern protection apps.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+
+<div class="font-card">
+    <img src="Jakie chang p.png" alt="Jackie Chan">
+    <div class="font-info">
+        <div class="font-name">Legendary Jackie Art</div>
+        <p class="font-desc">A stylized, vibrant portrait illustration of the martial arts legend Jackie Chan, perfect for fan posters.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="ELIZABETH GRANY 001.png" alt="Queen Elizabeth">
+    <div class="font-info">
+        <div class="font-name">Royal Tribute Vector</div>
+        <p class="font-desc">A dignified and detailed digital portrait of Queen Elizabeth II, ideal for commemorative designs.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="Fish ride boat.jpg" alt="Fish Illustration">
+    <div class="font-info">
+        <div class="font-name">Surreal Marine Art</div>
+        <p class="font-desc">A creative and whimsical illustration of a fish riding a boat, perfect for storybook covers.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="girl 2 rose girl.png" alt="Rose Girl">
+    <div class="font-info">
+        <div class="font-name">Floral Maiden Art</div>
+        <p class="font-desc">An aesthetic digital painting blending feminine beauty with delicate rose elements.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="girl.jpg" alt="Girl Illustration">
+    <div class="font-info">
+        <div class="font-name">Modern Lifestyle Vector</div>
+        <p class="font-desc">A clean, minimalist vector of a girl, suitable for modern web illustrations and social media graphics.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="gutar.png" alt="Guitar">
+    <div class="font-info">
+        <div class="font-name">Acoustic Soul Vector</div>
+        <p class="font-desc">A high-definition acoustic guitar illustration, ideal for music brand identity and gig posters.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="HARDRON (1).png" alt="Hardron">
+    <div class="font-info">
+        <div class="font-name">Hardron Tech Identity</div>
+        <p class="font-desc">Futuristic and bold typography design for tech startups and gaming hardware brands.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY LOGO</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="dsdddAsset 1@2x.png" alt="Geometric Design">
+    <div class="font-info">
+        <div class="font-name">Cyber Grid Element</div>
+        <p class="font-desc">A versatile geometric grid element designed for UI/UX backgrounds and tech-themed visuals.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="fffsdsdadddaaAsset 1@2x.png" alt="Vibrant Pattern">
+    <div class="font-info">
+        <div class="font-name">Neon Flow Pattern</div>
+        <p class="font-desc">An energetic, neon-colored flow pattern perfect for digital backdrops and creative packaging.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="fffssdadddaaAsset 2@2x.png" alt="Luxury Asset">
+    <div class="font-info">
+        <div class="font-name">Elite Gold Texturing</div>
+        <p class="font-desc">A premium gold-textured graphic element for high-end fashion and jewelry branding.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+<div class="font-card">
+    <img src="METER 2.png" alt="Performance Meter">
+    <div class="font-info">
+        <div class="font-name">Velocity Gauge v2</div>
+        <p class="font-desc">A high-fidelity performance meter graphic for automotive dashboards and fitness tracking apps.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="METER3.png" alt="Modern Meter">
+    <div class="font-info">
+        <div class="font-name">Digital Precision Meter</div>
+        <p class="font-desc">Sleek, futuristic gauge design perfect for data visualization and industrial control panels.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="NOTICE BOARD (1).png" alt="Notice Board">
+    <div class="font-info">
+        <div class="font-name">Virtual Bulletin Board</div>
+        <p class="font-desc">A clean, organized notice board template for educational platforms and office internal news.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY TEMPLATE</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="pen holder (2).png" alt="Pen Holder">
+    <div class="font-info">
+        <div class="font-name">Creative Workspace Kit</div>
+        <p class="font-desc">Stylized pen holder illustration for office-themed web graphics and stationary branding.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="plant pot.png" alt="Plant Pot">
+    <div class="font-info">
+        <div class="font-name">Eco-Home Botanical</div>
+        <p class="font-desc">Warm, aesthetic plant pot illustration ideal for lifestyle blogs and interior design content.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="Krab Kings.jpg" alt="Krab Kings">
+    <div class="font-info">
+        <div class="font-name">Krab Kings Logo Concept</div>
+        <p class="font-desc">Bold, character-driven seafood restaurant branding with a fun and energetic vibe.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY LOGO</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="Logo1.jpg" alt="HC Logo">
+    <div class="font-info">
+        <div class="font-name">Signature Emblem</div>
+        <p class="font-desc">A professional brand identity icon representing growth, precision, and modern design.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="low.jpg" alt="Low Poly Design">
+    <div class="font-info">
+        <div class="font-name">Geometric Low-Poly Peak</div>
+        <p class="font-desc">Modern geometric landscape art suitable for tech wallpapers and creative backgrounds.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="meditation.png" alt="Meditation">
+    <div class="font-info">
+        <div class="font-name">Zen Mindfulness Vector</div>
+        <p class="font-desc">Calm and peaceful meditation illustration for health, wellness, and yoga applications.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="stowberry.jpg" alt="Strawberry">
+    <div class="font-info">
+        <div class="font-name">Fresh Berry Vector</div>
+        <p class="font-desc">A juicy, vibrant strawberry illustration perfect for food packaging and summer-themed designs.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="TAGGY (2).png" alt="Taggy Logo">
+    <div class="font-info">
+        <div class="font-name">Taggy Brand Identity</div>
+        <p class="font-desc">Modern, playful branding for a creative agency or a trendy retail startup.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY LOGO</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="tree.png" alt="Tree">
+    <div class="font-info">
+        <div class="font-name">Organic Growth Tree</div>
+        <p class="font-desc">A detailed, artistic tree illustration symbolizing sustainability and nature-focused brands.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="water.png" alt="Water Splash">
+    <div class="font-info">
+        <div class="font-name">Laboratory eqipments & Element</div>
+        <p class="font-desc">Refreshing water splash graphic ideal for Educational science based laboratory.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="Screenshot (136).png" alt="Dashboard UI">
+    <div class="font-info">
+        <div class="font-name">Pro Analytics UI</div>
+        <p class="font-desc">A clean and functional admin dashboard interface for data-heavy web applications.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY UI KIT</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="ssAsset 1@2x.png" alt="Abstract Asset">
+    <div class="font-info">
+        <div class="font-name">Digital Flow Graphic</div>
+        <p class="font-desc">A high-resolution abstract shape for modern tech presentations and web hero sections.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="ssdAsset 2@2x.png" alt="Geometric Shape">
+    <div class="font-info">
+        <div class="font-name">Cyber Grid Element v2</div>
+        <p class="font-desc">Futuristic geometric design element for UI/UX overlays and tech-themed visuals.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="ssdaaAsset 1@2x.png" alt="Vibrant Design">
+    <div class="font-info">
+        <div class="font-name">Neon Gradient Flow</div>
+        <p class="font-desc">Vibrant and energetic gradient patterns for creative digital backdrops and merch.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="ssdaaaAsset 1@2x.png" alt="Complex Graphic">
+    <div class="font-info">
+        <div class="font-name">Elite Mesh Structure</div>
+        <p class="font-desc">Detailed mesh-style vector graphic for professional branding and premium backgrounds.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY ASSET</a>
+    </div>
+</div>
+
+<div class="font-card">
+    <img src="ssdadddaaAsset 2@2x.png" alt="Final Design">
+    <div class="font-info">
+        <div class="font-name">Apex Core Identity</div>
+        <p class="font-desc">A sleek, corporate-ready graphic element representing innovation and peak performance.</p>
+        <a href="https://buymeacoffee.com/hcgraphics" class="buy-btn">BUY VECTOR</a>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
+
+    <div class="donation-section">
+        <h2 style="color: var(--gold);">Support My Work</h2>
+        <p>If you love my free fonts, feel free to support me with a coffee!</p><br>
+        <a href="https://buymeacoffee.com/hcgraphics" class="coffee-btn">
+            <i class="fa-solid fa-mug-hot"></i> Buy Me a Coffee
+        </a>
+    </div>
+
+    <div class="contact-section" id="contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="contact-form">
+            <form action="mailto:harithadharmasiri@gmail.com" method="post" enctype="text/plain">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Your Message or Custom Font Request"></textarea>
+                <button type="submit" class="submit-btn">SEND MESSAGE</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 JIBA creators & HC Graphics Studio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
